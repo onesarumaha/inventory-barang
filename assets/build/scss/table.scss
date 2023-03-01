@@ -1,0 +1,127 @@
+/* table */
+@mixin table-color($color-name, $bg-color, $border-color) {
+	&--#{$color-name} thead tr {
+		background-color: $bg-color;
+		th {
+			border-color: $border-color;
+		}
+	}
+}
+
+@mixin pagination-color($color-name, $bg-color, $text-color) {
+	&--#{$color-name} &__item#{&}__item--active a {
+		background-color: $bg-color;
+		border-color: $bg-color;
+	}
+}
+
+.table {
+	margin-bottom: 0px;
+	background-color: white;
+
+	thead tr th, 
+	tbody tr td {
+		padding: 14px;
+		text-align: left;
+		border: 1px solid #e2e2e2;
+		font-size: 12pt;
+	}
+
+	thead tr th {
+		border-bottom-width: 2px;
+	}
+
+	tbody tr:hover {
+		background-color: #f7f7f7;
+	}
+
+	thead tr th a,
+	tbody tr td a {
+		font-size: 14pt;
+		color: #333;
+
+		&:hover {
+			color: $blue-reza;
+		}
+	}
+
+	@include table-color('gray', #f9f9f9, #e2e2e2);
+	@include table-color('blue', #f2f8ff, #c4e2f2);
+	@include table-color('green', #f4fcf5, #c2edcb);
+
+	&-box {
+		position: relative;
+
+		.loading-circle {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -20px;
+			right: -20px;
+			z-index: 10;
+			background-color: rgba(252,252,252,.9);
+
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+	}
+}
+
+.pagination {
+	margin-bottom: 0rem;
+
+	&__item a {
+		border: 1px solid #e2e2e2;
+		position: relative;
+		display: block;
+		padding: .5rem .75rem;
+		margin-left: -1px;
+		text-decoration: none;
+		background-color: white;
+		line-height: 1.25;
+		color: #333;
+
+		&:hover {
+			background-color: #e5e5e5;
+			border-color: #e2e2e2;
+		}
+
+		&:active,
+		&:link {
+			-webkit-box-shadow: none;
+            box-shadow: none;
+		}
+	}
+
+	&__item:last-child a {
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+
+	&__item:first-child a {
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+
+	&__item#{&}__item--disabled a {
+		color: #6c757d;
+		pointer-events: none;
+	}
+
+	&__item#{&}__item--active a {
+		color: white;
+		z-index: 3;
+	}
+
+	@include pagination-color('blue', $blue-reza, #198ad1);
+	@include pagination-color('green', $green-reza, #15c639);
+}

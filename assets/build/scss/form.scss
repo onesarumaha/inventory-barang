@@ -1,0 +1,291 @@
+/* input */
+@mixin form-focus-color($name-color, $box-shadow-color, $border-color) {
+	input.form--focus-#{$name-color}:focus,
+	textarea.form--focus-#{$name-color}:focus,
+	select.form--focus-#{$name-color}:focus {
+		// remove default outline in google chrome
+		outline: none;
+		border: 1px solid $border-color;
+
+		-webkit-box-shadow: 0 0 0 0.2rem $box-shadow-color;
+		box-shadow: 0 0 0 0.2rem $box-shadow-color;
+	}
+}
+
+@mixin form-info-color($name-info, $border-color) {
+	input.form.form--#{$name-info},
+	textarea.form.form--#{$name-info},
+	select.form.form--#{$name-info} {
+		border-color: $border-color;
+	}
+}
+
+@mixin form-text-color($name-color, $color) {
+	.form-text--#{$name-color} {
+		color: $color;
+	}
+}
+
+input.form,
+select.form,
+textarea.form {
+	border: 1px solid #ced4da;
+	border-radius: 4px;
+	padding: 8px 16px;
+	font-size: 12pt;
+	background-color: white;
+	color: #333;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.form-group {
+	margin-bottom: 0rem;
+	margin-top: 1rem;
+
+	input.form,
+	select.form,
+	textarea.form {
+		margin-top: 0rem;
+	}
+
+	&--d-flex {
+		display: -webkit-box;
+    	display: -ms-flexbox;
+    	display: flex;
+
+		-ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+		label {
+			-ms-flex-preferred-size: 70%;
+        	flex-basis: 70%;
+		}
+
+		label.optional-label {
+			-ms-flex-preferred-size: 30%;
+        	flex-basis: 30%;
+
+			text-align: right;
+			color: #878787;
+		}
+
+		input.form,
+		select.form,
+		textarea.form {
+			-webkit-box-flex: 1;
+        	-ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+		}
+	}
+}
+
+input[disabled].form,
+select[disabled].form,
+textarea[disabled].form {
+	background-color: #f2f2f2;
+}
+
+input.form::placeholder,
+textarea.form::placeholder,
+select[disabled].form {
+	opacity: 1;
+	color: #b7b7b7;
+}
+
+@include form-focus-color('blue', rgba(0, 157, 255, 0.25), #60adff);
+@include form-focus-color('green', rgba(0, 255, 51, 0.25), #56d36d);
+@include form-focus-color('red', rgba(255, 0, 0, 0.20), #f97070);
+@include form-focus-color('orange', rgba(255, 154, 22, 0.26), #ffa94f);
+
+@include form-info-color('success', #56d36d);
+@include form-info-color('info', #60adff);
+@include form-info-color('danger', #f97070);
+@include form-info-color('warning', #ffa94f);
+
+input.form:invalid,
+textarea.form:invalid,
+select.form:invalid {
+	border: 1px solid #f97070;
+
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.20);
+	box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.20);
+}
+
+select { 
+	&.form {
+		padding-right: 2.5rem;
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		background: url('data:image/svg+xml,<svg version="1.1" viewBox="0 0 16 16" fill="%23565656" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>');
+		background-repeat: no-repeat;
+		background-position-x: calc(100% - 1rem);
+		background-position-y: center;
+		background-size: 13px;
+		background-color: white;
+	}
+	&[disabled].form {
+		background: url('data:image/svg+xml,<svg version="1.1" viewBox="0 0 16 16" fill="%23b7b7b7" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>');
+		background-repeat: no-repeat;
+		background-position-x: calc(100% - 1rem);
+		background-position-y: center;
+		background-size: 13px;
+		background-color: #f2f2f2;
+	}
+}
+
+small {
+	font-size: 10pt;
+}
+
+@include form-text-color('green', #15c639);
+@include form-text-color('blue', #198ad1);
+@include form-text-color('red', #d62020);
+@include form-text-color('orange', #ff990a);
+
+.form-check {
+	padding-left: 20px;
+	margin-top: .5rem;
+
+	input[type="checkbox"].form,
+	input[type="radio"].form {
+		width: auto;
+		position: absolute;
+		left: 0;
+		margin-top: .3rem;
+	}
+
+	input[type="radio"].form {
+		margin-left: -1.25px;
+	}
+
+	label#{&}__label {
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+
+	input[type="checkbox"][disabled].form ~ label#{&}__label,
+	input[type="radio"][disabled].form ~ label#{&}__label {
+		color: #6c757d;
+		pointer-events: none;
+	}
+
+	&--inline {
+		display: inline-block;
+		margin-right: 15px;
+	}
+
+	&--not-label {
+		padding-left: 0px;
+
+		input[type="checkbox"].form,
+		input[type="radio"].form {
+			margin-top: 0px;
+			position: static;
+		}
+	}
+
+	small {
+		display: block;
+	}
+}
+
+.input-group {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	margin-top: 1rem;
+
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+
+	&__prepend {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	&__append {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	&__prepend .btn,
+	&__append .btn,
+	&__prepend &__text,
+	&__append &__text {
+		white-space: nowrap;
+
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	&__prepend .btn,
+	&__append .btn {
+		border-radius: 0px;
+	}
+
+	&__prepend &__text,
+	&__append &__text {
+		padding: 8px 16px;
+		border: 1px solid #ced4da;
+		background-color: #f2f2f2;
+	}
+
+	&__prepend &__text,
+	&__prepend .btn {
+		border-right: none;
+
+		&:first-child {
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;			
+		}
+	}
+
+	&__append &__text,
+	&__append .btn {
+		border-left: none;
+
+		&:last-child {
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	}
+
+	input.form,
+	select.form,
+	textarea.form {
+		border-radius: 0px;
+		position: relative;
+		width: 0%;
+		margin-top: 0rem;
+
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+
+		&:first-child {
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+		}
+
+		&:last-child {
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	}
+}

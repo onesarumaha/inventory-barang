@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Require meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Chart . Reza Admin</title>
+
+    <!-- Social network metas -->
+    <meta name="author" content="@FikkriReza">
+    <meta name="description" content="Open source responsive admin template with Bootstrap framework">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FikkriReza">
+    <meta name="twitter:creator" content="@FikkriReza">
+
+    <meta property="fb:app_id" content="801699283982913">
+    <meta property="og:url" content="https://rezafikkri.github.io/Reza-Admin">
+    <meta property="og:title" content="Chart . Reza Admin">
+    <meta property="og:description" content="Open source responsive admin template with Bootstrap framework">
+    <meta property="og:image" content="https://rezafikkri.github.io/Reza-Admin/dist/img/rezaadmin.jpg">
+
+	<!-- Bootstrap CSS first -->
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
+    <!-- then Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- then Reza Admin CSS and Doc css -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/reza-admin.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/doc.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../../dist/img/Reza_Admin.ico">
+    <!-- higlight css -->
+    <link rel="stylesheet" href="../dist/plugin/highlight/styles/nord.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar--white">
+        <a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+        <a class="navbar-brand ml-3" href="index.html"><img src="../../dist/img/Reza_Admin.svg" width="120" alt="logo reza"></a>
+        <button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+            <span class="fa fa-navicon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://github.com/rezafikkri/Reza-Admin" class="nav-link"><span class="fa fa-github fa-lg"></span></a></li>
+                <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/fikkrireza" class="nav-link"><span class="fa fa-twitter fa-lg"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+        <ul class="sidebar__nav">
+            <li class="sidebar__item"><a href="index.html"><span class="fa fa-wrench"></span> Instalasi</a></li>
+
+            <li class="sidebar__item"><a href="dependencies.html"><span class="fa fa-cube"></span> Ketergantungan & Plugin</a></li>
+            <li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-columns"></span> Tata Letak</a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown-item"><a href="navbar.html">Navbar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="sidebar.html">Sidebar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="main.html">Main</a></li>
+                    <li class="sidebar__dropdown-item"><a href="footer.html">Footer</a></li>
+                </ul>
+            </li>
+            <li class="sidebar__item sidebar__item--dropdown-active"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-puzzle-piece"></span> Komponen</a>
+                <ul class="sidebar__dropdown sidebar__dropdown--show">
+                    <li class="sidebar__dropdown-item sidebar__dropdown-item--active"><a href="chart.html">Chart</a></li>
+                    <li class="sidebar__dropdown-item"><a href="loading.html">Loading</a></li>
+                    <li class="sidebar__dropdown-item"><a href="info-box.html">Info Box</a></li>
+                    <li class="sidebar__dropdown-item"><a href="button.html">Button</a></li>
+                    <li class="sidebar__dropdown-item"><a href="alert.html">Alert</a></li>
+                    <li class="sidebar__dropdown-item"><a href="modal.html">Modal</a></li>
+                    <li class="sidebar__dropdown-item"><a href="form.html">Form</a></li>
+                    <li class="sidebar__dropdown-item"><a href="table.html">Table</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__item"><a class="sidebar__btn-dropdown" href=""><span class="fa fa-building"></span> Halaman</a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown-item"><a href="login.html">Login</a></li>
+                    <li class="sidebar__dropdown-item"><a href="register.html">Daftar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="forgot-password.html">Lupa Password</a></li>
+                    <li class="sidebar__dropdown-item"><a href="404.html">404</a></li>
+                    <li class="sidebar__dropdown-item"><a href="blank.html">Kosong</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- main -->
+    <main class="main main--ml-sidebar-width">
+        <div class="row">
+            <header class="main__header col-12 mb-2">
+                <div class="main__title">
+                    <h4>Chart</h4>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Chart</li>
+                    </ul>
+                </div>              
+            </header>
+
+            <div class="col-12">
+                <div class="main__box">
+                    <p>Membuat chart tidak jauh berbeda dengan <a href="https://www.chartjs.org/docs/latest/" target="_blank" rel="noopener noreferrer">dokumentasi Chart Js</a>, namun kamu perlu tag <i>&lt;div&gt;</i> atau <i>&lt;section&gt;</i> dengan class <span class="text-green">.chart</span>, didalamnya ada dua bagian yaitu <b>Chart Header</b> (<i>tempat judul dari chart</i>) dan <b>Chart Body</b> (<i>tempat chart</i>). Untuk membuat Chart Header, kamu perlu membuat element menggunakan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.chart__header</span>, dan letakkan judul dari chart didalamnya menggunakan tag <i>&lt;h6&gt;</i>. Untuk membuat Chart Body kamu perlu membuat element menggunakan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.chart__body</span>, didalamnya letakkan code untuk chart, dan letakkan Chart Body dibawah Chart Header. Standar tinggi dari chart adalah 350px, kamu juga bisa mengaturnya dengan menggunakan attribute <span class="text-green">height</span> pada tag <i>canvas</i>.</p>
+                    <blockquote class="blockquote blockquote--green">
+                       Jika kamu belum pernah menggunakan Chart js sebelumnya, saya sarankan untuk membaca dokumentasi dari Chart js!. Disana sudah dijelaskan dengan detail. Jika kamu sebelumnya pernah mempelajari cara membuat Main pada menu Tata Letak > Main, kamu bisa meletakkan Chart didalam grid sistem Bootstrap, dan tanpa harus meletakkan Chart didalam Box.
+                    </blockquote>
+                    <h4 class="mt-5">Area Chart</h4>
+                    <div class="pre-code-box">
+                        <div class="pre-code-box__preview">
+                            <section class="chart">
+                                <div class="chart__header">
+                                    <h6>Pengunjung, Januari 2020</h6>
+                                </div>
+                                <div class="chart__body">
+                                    <canvas id="area_chart"></canvas>
+                                </div>
+                            </section>
+                        </div>
+                        <pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;section class=&quot;chart&quot;&gt;
+    &lt;div class=&quot;chart__header&quot;&gt;
+        &lt;h6&gt;Pengunjung, Januari 2020&lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;chart__body&quot;&gt;
+        &lt;canvas id=&quot;area_chart&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    </div><!-- pre-code-box -->
+                    <pre class="mt-2"><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">Javascript</a></div><code class="javascript">// Area Chart
+const areaChart = document.querySelector("#area_chart").getContext('2d');
+let configAreaChart = {
+    type: 'line',
+    data: {
+        labels: ['Ahad, 11','Senin, 12','Selasa, 13','Rabu, 14','Kamis, 15','Jum\'at, 16'],
+        datasets: [{
+            label: 'Pengunjung',
+            data: [10,6,7,5,1,14],
+            fill: 'origin',
+            backgroundColor: 'rgba(37,151,224,.7)',
+            borderColor: '#2597e0'
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        legend: {
+            display: false
+        },
+        tooltips: {
+            titleFontFamily: 'sans-serif',
+            bodyFontFamily: 'sans-serif',
+            backgroundColor: '#fff',
+            titleFontColor: '#333',
+            bodyFontColor: '#333',
+            borderColor: '#e2e2e2',
+            borderWidth: '1',
+        }
+    }
+}
+new Chart(areaChart, configAreaChart);</code></pre>
+
+                    <h4 class="mt-5">Pie Chart</h4>
+                    <div class="pre-code-box">
+                        <div class="pre-code-box__preview">
+                            <section class="chart">
+                                <div class="chart__header">
+                                    <h6>Pemakaian Browser, Januari 2020</h6>
+                                </div>
+                                <div class="chart__body">
+                                    <canvas id="pie_chart"></canvas>
+                                </div>
+                            </section>
+                        </div><!-- pre-code-box__preview -->
+                        <pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;section class=&quot;chart&quot;&gt;
+    &lt;div class=&quot;chart__header&quot;&gt;
+        &lt;h6&gt;Pemakaian Browser, Januari 2020&lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;chart__body&quot;&gt;
+        &lt;canvas id=&quot;pie_chart&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    </div><!-- pre-code-box -->
+                    <pre class="mt-2"><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">Javascript</a></div><code class="javascript">// Pie Chart
+const pieChart = document.querySelector("#pie_chart").getContext('2d');
+let configPieChart = {
+    type: 'pie',
+    data: {
+        labels: ['Chrome','Mozilla','Uc Browser','Opera Mini'],
+        datasets: [{
+            data: [10,6,7,5],
+            backgroundColor: [
+                "#1bd741",
+                "#2597e0",
+                "#f9a022",
+                "#dd2525"
+            ]
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        legend: {
+            display: true
+        },
+        tooltips: {
+            titleFontFamily: 'sans-serif',
+            bodyFontFamily: 'sans-serif',
+            backgroundColor: '#fff',
+            titleFontColor: '#333',
+            bodyFontColor: '#333',
+            borderColor: '#e2e2e2',
+            borderWidth: '1',
+        }
+    }
+}
+new Chart(pieChart, configPieChart);</code></pre>
+
+                    <h4 class="mt-5">Bar Chart</h4>
+                    <div class="pre-code-box">
+                        <div class="pre-code-box__preview">
+                            <section class="chart">
+                                <div class="chart__header">
+                                    <h6>Pengunjung 2020</h6>
+                                </div>
+                                <div class="chart__body">
+                                    <canvas id="bar_chart"></canvas>
+                                </div>                                
+                            </section>
+                        </div><!-- pre-code-box__preview -->
+                        <pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;section class=&quot;chart&quot;&gt;
+    &lt;div class=&quot;chart__header&quot;&gt;
+        &lt;h6&gt;Pengunjung 2020&lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;chart__body&quot;&gt;
+        &lt;canvas id=&quot;bar_chart&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;                                
+&lt;/section&gt;</code></pre>
+                    </div><!-- pre-code-box -->
+                    <pre class="mt-2"><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">Javascript</a></div><code class="javascript">// Bar Chart
+const barChart = document.querySelector("#bar_chart").getContext('2d');
+let configBarChart = {
+    type: 'bar',
+    data: {
+        labels: ['Januari','Februari','Maret','April','Mai','Juni'],
+        datasets: [{
+            data: [20,30,15,40,70,60],
+            backgroundColor: "#2597e0"
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        legend: {
+            display: false
+        },
+        tooltips: {
+            titleFontFamily: 'sans-serif',
+            bodyFontFamily: 'sans-serif',
+            backgroundColor: '#fff',
+            titleFontColor: '#333',
+            bodyFontColor: '#333',
+            borderColor: '#e2e2e2',
+            borderWidth: '1',
+        }
+    }
+}
+new Chart(barChart, configBarChart);</code></pre>
+
+                    <h4 class="mt-5">Doughnut Chart</h4>
+                    <div class="pre-code-box">
+                        <div class="pre-code-box__preview">
+                            <section class="chart">
+                                <div class="chart__header">
+                                    <h6>Pemakaian browser, Januari 2020</h6>
+                                </div>
+                                <div class="chart__body">
+                                    <canvas id="doughnut_chart"></canvas>
+                                </div>
+                            </section>
+                        </div><!-- pre-code-box__preview -->
+                        <pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;section class=&quot;chart&quot;&gt;
+    &lt;div class=&quot;chart__header&quot;&gt;
+        &lt;h6&gt;Pemakaian browser, Januari 2020&lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;chart__body&quot;&gt;
+        &lt;canvas id=&quot;doughnut_chart&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    </div><!-- pre-code-box -->
+                    <pre class="mt-2"><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">Javascript</a></div><code class="javascript">// Doughnut Chart
+const doughnutChart = document.querySelector("#doughnut_chart").getContext('2d');
+let configDoughnutChart = {
+    type: 'doughnut',
+    data: {
+        labels: ['Mozilla','Chrome','Uc Browser','Opera Mini'],
+        datasets: [{
+            data: [20,15,7,10],
+            backgroundColor: [
+                "#2597e0",
+                "#1bd741",
+                "#f9a022",
+                "#dd2525"
+            ]
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        legend: {
+            display: true
+        },
+        tooltips: {
+            titleFontFamily: 'sans-serif',
+            bodyFontFamily: 'sans-serif',
+            backgroundColor: '#fff',
+            titleFontColor: '#333',
+            bodyFontColor: '#333',
+            borderColor: '#e2e2e2',
+            borderWidth: '1',
+        }
+    }
+}
+new Chart(doughnutChart, configDoughnutChart);</code></pre>
+                </div><!-- main__box -->
+            </div>
+        </div><!-- row -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer footer--ml-sidebar-width">
+        <p class="mb-2 mb-sm-0">Copyright &copy; Reza Admin 2020. All rights reserved</p>
+        <p>Version 1.0.1</p>
+    </footer>
+
+    <!-- jQuery first, then Bootstrap JS, and Reza Admin JS-->
+    <script src="../../dist/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/reza-admin.min.js"></script>
+
+    <!-- Optional Javascript -->
+    <script src="../dist/js/doc.min.js"></script>
+    <script src="../../plugins/Chart.js/Chart.min.js"></script>
+    <script src="../dist/plugin/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script type="text/javascript">
+        // Area Chart
+        const areaChart = document.querySelector("#area_chart").getContext('2d');
+        let configAreaChart = {
+            type: 'line',
+            data: {
+                labels: ['Ahad, 11','Senin, 12','Selasa, 13','Rabu, 14','Kamis, 15','Jum\'at, 16'],
+                datasets: [{
+                    label: 'Pengunjung',
+                    data: [10,6,7,5,1,14],
+                    fill: 'origin',
+                    backgroundColor: 'rgba(37,151,224,.7)',
+                    borderColor: '#2597e0'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    titleFontFamily: 'sans-serif',
+                    bodyFontFamily: 'sans-serif',
+                    backgroundColor: '#fff',
+                    titleFontColor: '#333',
+                    bodyFontColor: '#333',
+                    borderColor: '#e2e2e2',
+                    borderWidth: '1',
+                }
+            }
+        }
+        new Chart(areaChart, configAreaChart);
+
+        // Pie Chart
+        const pieChart = document.querySelector("#pie_chart").getContext('2d');
+        let configPieChart = {
+            type: 'pie',
+            data: {
+                labels: ['Chrome','Mozilla','Uc Browser','Opera Mini'],
+                datasets: [{
+                    data: [10,6,7,5],
+                    backgroundColor: [
+                        "#1bd741",
+                        "#2597e0",
+                        "#f9a022",
+                        "#dd2525"
+                    ]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: true
+                },
+                tooltips: {
+                    titleFontFamily: 'sans-serif',
+                    bodyFontFamily: 'sans-serif',
+                    backgroundColor: '#fff',
+                    titleFontColor: '#333',
+                    bodyFontColor: '#333',
+                    borderColor: '#e2e2e2',
+                    borderWidth: '1',
+                }
+            }
+        }
+        new Chart(pieChart, configPieChart);
+
+        // Bar Chart
+        const barChart = document.querySelector("#bar_chart").getContext('2d');
+        let configBarChart = {
+            type: 'bar',
+            data: {
+                labels: ['Januari','Februari','Maret','April','Mai','Juni'],
+                datasets: [{
+                    data: [20,30,15,40,70,60],
+                    backgroundColor: "#2597e0"
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    titleFontFamily: 'sans-serif',
+                    bodyFontFamily: 'sans-serif',
+                    backgroundColor: '#fff',
+                    titleFontColor: '#333',
+                    bodyFontColor: '#333',
+                    borderColor: '#e2e2e2',
+                    borderWidth: '1',
+                }
+            }
+        }
+        new Chart(barChart, configBarChart);
+
+        // Doughnut Chart
+        const doughnutChart = document.querySelector("#doughnut_chart").getContext('2d');
+        let configDoughnutChart = {
+            type: 'doughnut',
+            data: {
+                labels: ['Mozilla','Chrome','Uc Browser','Opera Mini'],
+                datasets: [{
+                    data: [20,15,7,10],
+                    backgroundColor: [
+                        "#2597e0",
+                        "#1bd741",
+                        "#f9a022",
+                        "#dd2525"
+                    ]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: true
+                },
+                tooltips: {
+                    titleFontFamily: 'sans-serif',
+                    bodyFontFamily: 'sans-serif',
+                    backgroundColor: '#fff',
+                    titleFontColor: '#333',
+                    bodyFontColor: '#333',
+                    borderColor: '#e2e2e2',
+                    borderWidth: '1',
+                }
+            }
+        }
+        new Chart(doughnutChart, configDoughnutChart);
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/**
+ * Reza-Admin v1.0.1
+ * Copyright (c) 2020 Reza Admin
+ * Released under the MIT License
+*/
+
+$blue-reza: #2597e0;
+$green-reza: #1bd741;
+$orange-reza: #f9a022;
+$red-reza: #ea2a2a;
+$gray-reza: #a8a8a8;
+$pt-sidebar-main-konten: 80px;
+$default-border-color: #e8e8e8;
+
+@import "font-face.scss";
+
+/* General Style */
+html, body {
+	font-family: open_sansregular, sans-serif;
+}
+
+body {
+	background-color: #fcfcfc;
+	position: relative;
+	min-height: 100vh;
+}
+
+body.stop-scrolling {
+	overflow: hidden;
+}
+
+strong {
+	font-family: open_sansbold, sans-serif;
+}
+
+b {
+	font-family: open_sanssemibold, sans-serif;
+}
+
+time {
+	display: inline-block;
+}
+
+.main {
+	padding: $pt-sidebar-main-konten 25px;
+	padding-bottom: 100px;
+	position: relative;
+	
+	-webkit-transition: margin-left 0.5s cubic-bezier(.65,.05,.36,1);
+    -o-transition: margin-left 0.5s cubic-bezier(.65,.05,.36,1);
+    transition: margin-left 0.5s cubic-bezier(.65,.05,.36,1);
+
+    @media (max-width: 767.98px) {
+    	padding-left: 15px;
+    	padding-right: 15px;
+    }
+
+    &--ml-sidebar-width {
+		margin-left: 228px;
+
+		@media (max-width: 767.98px) {
+			margin-left: 0px;
+		}
+	}
+
+	&__box {
+		padding: 20px;
+		background-color: white;
+		border: 1px solid $default-border-color;
+		border-radius: 4px;
+		overflow: hidden;
+
+		&:not(&--hover-not-overflow-x-auto):hover {
+			overflow-x: auto;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: open_sanssemibold, sans-serif;
+			color: #333;
+		}
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+
+		h1, h2, h3, h4, h5, h6 {
+			flex: 1;
+		}
+
+		.breadcrumb {
+			flex: 1;
+			justify-content: flex-end;
+			background-color: transparent;
+			padding: 0px;
+		}
+
+		@media (max-width: 575.98px) {
+			flex-direction: column-reverse;
+
+			.breadcrumb {
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+@import "navbar.scss";
+@import "sidebar.scss";
+@import "footer.scss";
+@import "button.scss";
+@import "form.scss";
+@import "loading.scss";
+@import "info-box.scss";
+@import "chart.scss";
+@import "table.scss";
+@import "alert.scss";
+@import "modal.scss";
+@import "login-register-forgotpassword.scss";
+@import "404.scss";
+@import "utilities.scss";

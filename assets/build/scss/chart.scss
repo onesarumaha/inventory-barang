@@ -1,0 +1,21 @@
+/* chart */
+.chart {
+	padding: 20px;
+	border: 1px solid $default-border-color;
+	border-radius: 4px;
+	background-color: white;
+
+	&__body {
+		min-height: 350px;
+	}
+
+	&__header {
+		margin-bottom: 1.5rem;
+	}
+
+	h6 {
+		text-align: center;
+		font-family: open_sanssemibold, sans-serif;
+		color: #595959;
+	}
+}

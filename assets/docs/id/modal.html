@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Require meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Modal . Reza Admin</title>
+
+    <!-- Social network metas -->
+    <meta name="author" content="@FikkriReza">
+    <meta name="description" content="Open source responsive admin template with Bootstrap framework">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FikkriReza">
+    <meta name="twitter:creator" content="@FikkriReza">
+
+    <meta property="fb:app_id" content="801699283982913">
+    <meta property="og:url" content="https://rezafikkri.github.io/Reza-Admin">
+    <meta property="og:title" content="Modal . Reza Admin">
+    <meta property="og:description" content="Open source responsive admin template with Bootstrap framework">
+    <meta property="og:image" content="https://rezafikkri.github.io/Reza-Admin/dist/img/rezaadmin.jpg">
+
+	<!-- Bootstrap CSS first -->
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
+    <!-- then Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- then Reza Admin CSS and Doc css -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/reza-admin.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/doc.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../../dist/img/Reza_Admin.ico">
+    <!-- higlight css -->
+    <link rel="stylesheet" href="../dist/plugin/highlight/styles/nord.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar--white">
+        <a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+        <a class="navbar-brand ml-3" href="index.html"><img src="../../dist/img/Reza_Admin.svg" width="120" alt="logo reza"></a>
+        <button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+            <span class="fa fa-navicon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://github.com/rezafikkri/Reza-Admin" class="nav-link"><span class="fa fa-github fa-lg"></span></a></li>
+                <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/fikkrireza" class="nav-link"><span class="fa fa-twitter fa-lg"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+        <ul class="sidebar__nav">
+            <li class="sidebar__item"><a href="index.html"><span class="fa fa-wrench"></span> Instalasi</a></li>
+
+            <li class="sidebar__item"><a href="dependencies.html"><span class="fa fa-cube"></span> Ketergantungan & Plugin</a></li>
+            <li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-columns"></span> Tata Letak</a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown-item"><a href="navbar.html">Navbar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="sidebar.html">Sidebar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="main.html">Main</a></li>
+                    <li class="sidebar__dropdown-item"><a href="footer.html">Footer</a></li>
+                </ul>
+            </li>
+            <li class="sidebar__item sidebar__item--dropdown-active"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-puzzle-piece"></span> Komponen</a>
+                <ul class="sidebar__dropdown sidebar__dropdown--show">
+                    <li class="sidebar__dropdown-item"><a href="chart.html">Chart</a></li>
+                    <li class="sidebar__dropdown-item"><a href="loading.html">Loading</a></li>
+                    <li class="sidebar__dropdown-item"><a href="info-box.html">Info Box</a></li>
+                    <li class="sidebar__dropdown-item"><a href="button.html">Button</a></li>
+                    <li class="sidebar__dropdown-item"><a href="alert.html">Alert</a></li>
+                    <li class="sidebar__dropdown-item sidebar__dropdown-item--active"><a href="modal.html">Modal</a></li>
+                    <li class="sidebar__dropdown-item"><a href="form.html">Form</a></li>
+                    <li class="sidebar__dropdown-item"><a href="table.html">Table</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__item"><a class="sidebar__btn-dropdown" href=""><span class="fa fa-building"></span> Halaman</a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown-item"><a href="login.html">Login</a></li>
+                    <li class="sidebar__dropdown-item"><a href="register.html">Daftar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="forgot-password.html">Lupa Password</a></li>
+                    <li class="sidebar__dropdown-item"><a href="404.html">404</a></li>
+                    <li class="sidebar__dropdown-item"><a href="blank.html">Kosong</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- main -->
+    <main class="main main--ml-sidebar-width">
+        <div class="row">
+            <header class="main__header col-12 mb-2">
+                <div class="main__title">
+                    <h4>Modal</h4>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Modal</li>
+                    </ul>
+                </div>              
+            </header>
+
+            <div class="col-12">
+                <div class="main__box">
+                	<p>Membuat Modal kamu membutuhkan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.modal</span> diikuti dengan class untuk style Modal-nya, ada <span class="text-green">.modal--success</span>, <span class="text-green">.modal--info</span>, <span class="text-green">.modal--danger</span>, dan <span class="text-green">.modal--warning</span>, jika Modalnya kurang lebar, kamu bisa menambahkan class <span class="text-green">.modal--lg</span> setelah class untuk style Modal-nya. Lalu didalamnya buat element menggunakan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.modal__content</span>, didalamnya lagi ada 3 bagian yaitu, <b>Header</b>, <b>Body</b>, dan <b>Footer</b>.</p>
+
+                	<p><b>Pertama</b>, Header. Bagian header diisi dengan icon dan judul dari Modal-nya, seperti 'Data dibuat' atau 'Konfirmasi Penghapusan' dan lain-lain. Membuat Header kamu membutuhkan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.modal__header</span>. Didalamnya terdapat dua bagian yaitu <b>Icon</b> dan <b>Judul</b>. Membuat Icon kamu perlu tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.modal__icon</span>, dan letakkan icon dari Font Awesome didalamnya. Membuat Judul kamu perlu tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.modal__title</span>, lalu didalamnya gunakan tag <i>&lt;h5&gt;</i> untuk membuat Judul.</p>
+
+                	<p><b>Body</b>, Body. Bagian Body diisi dengan penjelasan detail dari Modal-nya, kamu juga bisa menambahkan input jika diperlukan. Membuat Body kamu membutuhkan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.modal__body</span>. Didalamnya kamu bisa menambahkan text menggunakan tag <i>p</i>, atau menambahkan Form seperti pada <a href="form.html" target="_blank">dokumentasi Form</a>.</p>
+
+                	<p><b>Footer</b>, Footer. Bagian Footer diisi dengan Button, seperti Button untuk menutup Modal. Membuat Footer kamu membutuhkan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.modal__footer</span>, lalu didalamnya kamu bisa membuat Button seperti pada <a href="button.html" target="_blank">dokumentasi Button</a>. Jika kamu memiliki dua Button, letakkan code untuk Button <b>Utama</b> di bawah code untuk Button <b>Kurang Penting</b>, Supaya Button Utama berada di sebelah kanan dan Button Kurang Penting disebelah kiri Modal. Tambahkan juga class utilities Bootstrap untuk margin bottom <span class="text-green">.mb-2.mb-sm-0</span> pada Button Utama, karena pada saat lebar viewport lebih kecil sama dengan 575.98px, masing-masing Button akan mempunyai lebar 100% dan posisi Button Utama berada diatas Button Kurang Penting, sehingga kita perlu untuk menambahkan jarak kebawah pada Button Utama terhadap Button Kurang Penting.</p>
+
+                	<p>Modal secara standar disembunyikan, kamu bisa menampilkannya dengan menambahkan class <span class="text-green">.modal--fade-in</span> setelah class untuk style Modal-nya atau setelah class <span class="text-green">.modal</span>. Jika kamu ingin menutup Modal-nya maka cukup hapus class <span class="text-green">.modal--fade-in</span>. Gunakan Javascript & DOM untuk menghapus atau menambahkan class.</p>
+
+                	<div class="pre-code-box">
+                		<div class="pre-code-box__preview">
+                			<a href="#" class="btn btn--red" id="show-modal">Tampilkan Modal Danger</a>
+                			<div class="modal modal--danger" id="modal-danger">
+								<div class="modal__content">
+									<div class="modal__header">
+                                        <div class="modal__icon">
+                                            <span class="fa fa-ban"></span>
+                                        </div>
+                                        <div class="modal__title">
+                                            <h5><span>Berbahaya</span>, Apakah kamu yakin?</h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal__body">
+                                        <p>Aksi ini tidak bisa dibatalkan, ini akan menghapus permanen Akun <b>@rezaSarifulFikri</b>.</p>
+                                        <p>Masukkan password untuk konfirmasi penghapusan Akun!</p>
+                                        <input type="password" name="password" class="form form--focus-red mt-0" placeholder="Password ...">
+                                    </div>
+                                    <div class="modal__footer">
+                                        <a href="#" class="btn btn--gray-outline" id="close-modal">Batal</a>
+                                        <a href="#" class="btn btn--red mb-2 mb-sm-0">Hapus Akun</a>
+                                    </div>
+								</div>
+							</div><!-- modal-danger -->
+                		</div><!-- pre-code-box__preview -->
+                		<pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;!-- button show modal danger --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn--red&quot; id=&quot;show-modal-danger&quot;&gt;Tampilkan Modal Danger&lt;/a&gt;
+
+&lt;!-- modal danger --&gt;
+&lt;div class=&quot;modal modal--danger&quot; id=&quot;modal-danger&quot;&gt;
+    &lt;div class=&quot;modal__content&quot;&gt;
+        &lt;div class=&quot;modal__header&quot;&gt;
+            &lt;div class=&quot;modal__icon&quot;&gt;
+                &lt;span class=&quot;fa fa-ban&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__title&quot;&gt;
+                &lt;h5&gt;&lt;span&gt;Berbahaya&lt;/span&gt;, Apakah kamu yakin?&lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__body&quot;&gt;
+            &lt;p&gt;Aksi ini tidak bisa dibatalkan, ini akan menghapus permanen Akun &lt;b&gt;@rezaSarifulFikri&lt;/b&gt;.&lt;/p&gt;
+            &lt;p&gt;Masukkan password untuk konfirmasi penghapusan Akun!&lt;/p&gt;
+            &lt;input type=&quot;password&quot; name=&quot;password&quot; class=&quot;form form--focus-red mt-0&quot; placeholder=&quot;Password ...&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__footer&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn--gray-outline&quot; id=&quot;close-modal&quot;&gt;Batal&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn--red mb-2 mb-sm-0&quot;&gt;Hapus Akun&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                	</div><!-- pre-code-box -->
+                	
+                	<pre class="mt-2"><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">Javascript</a></div><code class="javascript">const btnShowModal = document.querySelector("a#show-modal-danger");
+const modal = document.querySelector("div#modal-danger");
+const closeModal = modal.querySelector("a#close-modal");
+btnShowModal.addEventListener('click', e => {
+    // hilangkan fungsi default dari tag a
+    e.preventDefault();
+
+    // tampilkan modal
+    modal.classList.add("modal--fade-in");
+
+    /* tambahkan class .stop-scrolling pada tag &lt;body&gt; untuk menghilangkan scroll halaman, 
+    agar halaman tidak bisa di scroll */
+    document.body.classList.add("stop-scrolling");
+});
+
+closeModal.addEventListener('click', e => {
+    // hilangkan fungsi default dari tag a
+    e.preventDefault();
+
+    // sembunyikan/tutup modal
+    modal.classList.remove("modal--fade-in");
+
+    /* hapus class .stop-scrolling pada tag &lt;body&gt; agar 
+    halaman bisa di scroll kembali */
+    document.body.classList.remove("stop-scrolling");
+});</code></pre>
+					<div class="pre-code-box mt-4" id="more-modal">
+						<div class="pre-code-box__preview">
+							<!-- modal info -->
+							<a href="#" class="btn btn--blue mr-3 mt-2 mb-2 btn-show-modal" target-modal="#modal-info">Tampilkan Modal Info</a>
+							<div class="modal modal--info" id="modal-info">
+								<div class="modal__content">
+                                    <div class="modal__header">
+                                        <div class="modal__icon">
+                                            <span class="fa fa-info-circle"></span>
+                                        </div>
+                                        <div class="modal__title">
+                                            <h5><span>Info</span>, Perizinan Data</h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal__body">
+                                        <p>Kamu tidak memiliki izin untuk melihat data ini. Silahkan hubungi Admin jika ini salah!.</p>
+                                    </div>
+                                    <div class="modal__footer">
+                                        <a href="#" class="btn btn--blue close-modal">Ok, Saya mengerti</a>
+                                    </div>
+								</div>
+							</div>
+							<!-- modal info end -->
+
+							<!-- modal success -->
+							<a href="#" class="btn btn--green mr-3 mt-2 mb-2 btn-show-modal" target-modal="#modal-success">Tampilkan Modal Success</a>
+							<div class="modal modal--success" id="modal-success">
+								<div class="modal__content">
+                                    <div class="modal__header">
+                                        <div class="modal__icon">
+                                            <span class="fa fa-check-circle"></span>
+                                        </div>
+                                        <div class="modal__title">
+                                            <h5><span>Sukses</span>, Akun dibuat</h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal__body">
+                                        <p>Selamat, Akun <b>@rezaSarifulFikri</b> telah dibuat, sekarang kamu memiliki akses ke semua fitur.</p>
+                                    </div>
+                                    <div class="modal__footer">
+                                        <a href="#" class="btn btn--green close-modal">Ok, Terimakasih</a>
+                                    </div>
+								</div>
+							</div>
+							<!-- modal success end -->
+
+							<!-- modal warning -->
+							<a href="#" class="btn btn--orange mr-3 mt-2 mb-2 btn-show-modal" target-modal="#modal-warning">Tampilkan Modal Warning</a>
+							<div class="modal modal--warning" id="modal-warning">
+								<div class="modal__content">
+                                    <div class="modal__header">
+                                        <div class="modal__icon">
+                                            <span class="fa fa-warning"></span>
+                                        </div>
+                                        <div class="modal__title">
+                                            <h5><span>Peringatan</span>, Login Tidak Dikenali</h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal__body">
+                                        <p>Akun mu login di perangkat baru: <b>Linux, Firefox</b>. <a href="">Beri tahu kami jika itu bukan kamu!</a>.</p>
+                                    </div>
+                                    <div class="modal__footer">
+                                        <a href="#" class="btn btn--orange close-modal">Ok, Saya Mengerti</a>
+                                    </div>
+								</div>
+							</div>
+							<!-- modal warning end -->
+						</div><!-- pre-code-box__preview -->
+						<pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;!-- button show modal info --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn--blue&quot; id=&quot;show-modal-info&quot;&gt;Tampilkan Modal Info&lt;/a&gt;
+
+&lt;!-- modal info --&gt;
+&lt;div class=&quot;modal modal--info&quot; id=&quot;modal-info&quot;&gt;
+    &lt;div class=&quot;modal__content&quot;&gt;
+        &lt;div class=&quot;modal__header&quot;&gt;
+            &lt;div class=&quot;modal__icon&quot;&gt;
+                &lt;span class=&quot;fa fa-info-circle&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__title&quot;&gt;
+                &lt;h5&gt;&lt;span&gt;Info&lt;/span&gt;, Perizinan Data&lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__body&quot;&gt;
+            &lt;p&gt;Kamu tidak memiliki izin untuk melihat data ini. Silahkan hubungi Admin jika ini salah!.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__footer&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn--blue&quot; id=&quot;close-modal&quot;&gt;Ok, Saya mengerti&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- button show modal success --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn--green&quot; id=&quot;show-modal-success&quot;&gt;Tampilkan Modal Success&lt;/a&gt;
+
+&lt;!-- modal success --&gt;
+&lt;div class=&quot;modal modal--success&quot; id=&quot;modal-success&quot;&gt;
+    &lt;div class=&quot;modal__content&quot;&gt;
+        &lt;div class=&quot;modal__header&quot;&gt;
+            &lt;div class=&quot;modal__icon&quot;&gt;
+                &lt;span class=&quot;fa fa-check-circle&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__title&quot;&gt;
+                &lt;h5&gt;&lt;span&gt;Sukses&lt;/span&gt;, Akun dibuat&lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__body&quot;&gt;
+            &lt;p&gt;Selamat, Akun &lt;b&gt;@rezaSarifulFikri&lt;/b&gt; telah dibuat, sekarang kamu memiliki akses ke semua fitur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__footer&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn--green&quot; id=&quot;close-modal&quot;&gt;Ok, Terimakasih&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- button show modal warning --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn--orange&quot; id=&quot;show-modal-warning&quot;&gt;Tampilkan Modal Warning&lt;/a&gt;
+
+&lt;!-- modal warning --&gt;
+&lt;div class=&quot;modal modal--warning&quot; id=&quot;modal-warning&quot;&gt;
+    &lt;div class=&quot;modal__content&quot;&gt;
+        &lt;div class=&quot;modal__header&quot;&gt;
+            &lt;div class=&quot;modal__icon&quot;&gt;
+                &lt;span class=&quot;fa fa-warning&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__title&quot;&gt;
+                &lt;h5&gt;&lt;span&gt;Peringatan&lt;/span&gt;, Login Tidak Dikenali&lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__body&quot;&gt;
+            &lt;p&gt;Akun mu login di perangkat baru: &lt;b&gt;Linux, Firefox&lt;/b&gt;. &lt;a href=&quot;&quot;&gt;Beri tahu kami jika itu bukan kamu!&lt;/a&gt;.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__footer&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn--orange&quot; id=&quot;close-modal&quot;&gt;Ok, Itu Saya&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</div><!-- pre-code-box -->
+                </div><!-- main__box -->
+            </div>
+        </div><!-- row -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer footer--ml-sidebar-width">
+        <p class="mb-2 mb-sm-0">Copyright &copy; Reza Admin 2020. All rights reserved</p>
+        <p>Version 1.0.1</p>
+    </footer>
+
+    <!-- jQuery first, then Bootstrap JS, and Reza Admin JS-->
+    <script src="../../dist/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/reza-admin.min.js"></script>
+
+    <!-- Optional Javascript -->
+    <script src="../dist/js/doc.min.js"></script>
+    <script src="../dist/plugin/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+		/**
+		 * Modal
+		 */
+
+		const btnShowModal = document.querySelector("a#show-modal");
+		const modal = document.querySelector("div#modal-danger");
+		const closeModal = modal.querySelector("a#close-modal");
+		btnShowModal.addEventListener('click', function (e) {
+		    // hilangkan fungsi default dari tag a
+		    e.preventDefault(); 
+
+		    // tampilkan modal
+		    modal.classList.add("modal--fade-in"); 
+
+		    // tambahkan class .stop-scrolling pada tag <body> untuk menghilangkan scroll halaman, agar halaman tidak bisa di scroll
+		    document.body.classList.add("stop-scrolling");
+		});
+		closeModal.addEventListener('click', function (e) {
+		    // hilangkan fungsi default dari tag a
+		    e.preventDefault(); 
+
+		    // sembunyikan/tutup modal
+		    modal.classList.remove("modal--fade-in"); 
+
+		    // hapus class .stop-scrolling pada tag <body> agar halaman bisa di scroll kembali
+		    document.body.classList.remove("stop-scrolling");
+		});
+		
+		// Show hide More modal
+		const moreModal = document.querySelector("div#more-modal");
+
+		moreModal.addEventListener('click', function (e) {
+		    const targetBtnShowModal = e.target;
+
+		    if (targetBtnShowModal.classList.contains("btn-show-modal")) {
+		      e.preventDefault();
+		      const targetModal = targetBtnShowModal.nextElementSibling;
+
+		      const closeModal = targetModal.querySelector("a.close-modal");
+
+		      targetModal.classList.add("modal--fade-in");
+		      document.body.classList.add("stop-scrolling");
+
+		      closeModal.addEventListener('click', function (e) {
+		        e.preventDefault();
+		        targetModal.classList.remove("modal--fade-in");
+		        document.body.classList.remove("stop-scrolling");
+		      });
+		    }
+		});
+    </script>
+</body>
+</html>

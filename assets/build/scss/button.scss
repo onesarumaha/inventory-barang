@@ -1,0 +1,100 @@
+/* button */
+@mixin btn-normal-color($color-name, $base-color, $color-gradient-bottom, $color-gradient-bottom-hover) {
+	&--#{$color-name} {
+		border: 1px solid $color-gradient-bottom;
+		background-color: $base-color;
+		
+		background-image: -webkit-gradient(linear, left top, left bottom, from($base-color), to($color-gradient-bottom));
+    	background-image: -o-linear-gradient($base-color, $color-gradient-bottom);
+    	background-image: linear-gradient($base-color, $color-gradient-bottom);
+
+		@if $color-name == "link" {
+			color: #007bff;
+			&:hover {
+				color: #0056b3;
+			}
+		} @else {
+			&:hover {
+				background-image: -webkit-gradient(linear, left top, left bottom, from($base-color), to($color-gradient-bottom-hover));
+    			background-image: -o-linear-gradient($base-color, $color-gradient-bottom-hover);
+    			background-image: linear-gradient($base-color, $color-gradient-bottom-hover);
+			}
+		}
+		
+	}
+}
+
+@mixin btn-outline-color($color-name, $base-color, $color-gradient-bottom) {
+	&--#{$color-name}-outline {
+		border: 1px solid $color-gradient-bottom;
+		color: $color-gradient-bottom;
+		&:hover {
+			color: #fff;
+			background-color: $base-color;
+
+			background-image: -webkit-gradient(linear, left top, left bottom, from($base-color), to($color-gradient-bottom));
+    		background-image: -o-linear-gradient($base-color, $color-gradient-bottom);
+    		background-image: linear-gradient($base-color, $color-gradient-bottom);
+		}
+	}
+}
+
+.btn {
+	padding: 8px 16px;
+	color: #fff;
+	font-size: 12pt;
+
+	&:hover {
+		color: #fff;
+	}
+
+	&:focus {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	@include btn-normal-color('gray', $gray-reza, #8e8e8e, #777777);
+	@include btn-normal-color('blue', $blue-reza, #1c87c9, #1474a8);
+	@include btn-normal-color('green', $green-reza, #19c13a, #14aa30);
+	@include btn-normal-color('orange', $orange-reza, #e88b12, #d17112);
+	@include btn-normal-color('red', $red-reza, #d11b1b, #b51515);
+	@include btn-normal-color('link', transparent, transparent, transparent);
+
+	@include btn-outline-color('gray', $gray-reza, #8e8e8e);
+	@include btn-outline-color('blue', $blue-reza, #1c87c9);
+	@include btn-outline-color('green', $green-reza, #19c13a);
+	@include btn-outline-color('orange', $orange-reza, #e88b12);
+	@include btn-outline-color('red', $red-reza, #d11b1b);
+
+	&[disabled],
+	&--disabled {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+
+	&-loading {
+		position: relative;
+		display: inline-block;
+
+		.loading-circle {
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			background-color: rgba(252,252,252,.9);
+
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+	}
+}

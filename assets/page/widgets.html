@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Require meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Widgets . Reza Admin</title>
+
+    <!-- Social network metas -->
+    <meta name="author" content="@FikkriReza">
+    <meta name="description" content="Open source responsive admin template with Bootstrap framework">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FikkriReza">
+    <meta name="twitter:creator" content="@FikkriReza">
+
+    <meta property="fb:app_id" content="801699283982913">
+    <meta property="og:url" content="https://rezafikkri.github.io/Reza-Admin">
+    <meta property="og:title" content="Widgets . Reza Admin">
+    <meta property="og:description" content="Open source responsive admin template with Bootstrap framework">
+    <meta property="og:image" content="https://rezafikkri.github.io/Reza-Admin/dist/img/rezaadmin.jpg">
+
+	<!-- Bootstrap CSS first -->
+	<link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+	<!-- then Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- and Reza Admin CSS -->
+	<link rel="stylesheet" type="text/css" href="../dist/css/reza-admin.min.css">
+	<!-- Favicon -->
+	<link rel="icon" href="../dist/img/Reza_Admin.ico">
+</head>
+<body>		
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-sm navbar--white">
+		<a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+		<a class="navbar-brand ml-3" href="index.html"><img src="../dist/img/Reza_Admin.svg" width="120" alt="logo reza"></a>
+		<button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+		    <span class="fa fa-navicon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item navbar__notification">
+					<a class="nav-link" href="#">
+						<span class="fa fa-bookmark"></span>
+						<span class="navbar__notification-number navbar__notification-number--blue">2</span>
+					</a>
+				</li>
+				<li class="nav-item navbar__notification">
+					<a class="nav-link " href="#">
+						<span class="fa fa-bell"></span>
+						<span class="navbar__notification-number navbar__notification-number--orange">2</span>
+					</a>
+				</li>
+				<li class="nav-item navbar__avatar dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+						<img src="../dist/img/reza.jpg" alt="avatar image">
+						<span>Reza Sariful Fikri</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="" class="dropdown-item">Settings Account</a>
+						<div class="dropdown-divider"></div>
+						<a href="" class="dropdown-item dropdown-item--hover-red">Logout <span class="fa fa-sign-out"></span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- sidebar -->
+	<aside class="sidebar">
+		<ul class="sidebar__nav">
+			<li class="sidebar__item"><a href="../index.html"><span class="fa fa-home"></span> Dashboard</a></li>
+
+			<li class="sidebar__item sidebar__item--active"><a href="widgets.html"><span class="fa fa-th-large"></span> Widgets</a></li>
+			<li class="sidebar__item"><a href="charts.html"><span class="fa fa-bar-chart-o"></span> Charts</a></li>
+			<li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-desktop"></span> UI Elements</a>
+				<ul class="sidebar__dropdown">
+					<li class="sidebar__dropdown-item"><a href="general.html">General</a></li>
+					<li class="sidebar__dropdown-item"><a href="buttons.html">Buttons</a></li>
+					<li class="sidebar__dropdown-item"><a href="icons.html">Icons</a></li>
+				</ul>
+			</li>
+
+
+			<li class="sidebar__item"><a href="forms.html"><span class="fa fa-pencil-square-o"></span> Forms</a></li>
+			<li class="sidebar__item"><a href="tables.html"><span class="fa fa-th-list"></span> Tables</a></li>
+			<li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-building"></span> Page</a>
+				<ul class="sidebar__dropdown">
+					<li class="sidebar__dropdown-item"><a href="login.html">Login</a></li>
+					<li class="sidebar__dropdown-item"><a href="register.html">Register</a></li>
+					<li class="sidebar__dropdown-item"><a href="forgot-password.html">Forgot Password</a></li>
+					<li class="sidebar__dropdown-item"><a href="404.html">404 Error</a></li>
+					<li class="sidebar__dropdown-item"><a href="blank.html">Blank</a></li>
+				</ul>
+			</li>
+
+			<li class="sidebar__item sidebar__item--header mt-3">Important for read</li>
+			<li class="sidebar__item"><a href="../docs/"><span class="fa fa-book"></span> Documentation</a></li>
+		</ul>
+	</aside>
+
+	<!-- main -->
+	<main class="main main--ml-sidebar-width">
+		<div class="row">
+			<header class="main__header col-12 mb-2">
+				<div class="main__title">
+					<h4>Widgets</h4>
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+						<li class="breadcrumb-item active">Widgets</li>
+					</ul>
+				</div>				
+			</header>
+
+			<div class="col-12"><h5 class="mb-3">Info Boxs</h5></div>
+			<!-- info box -->
+			<div class="mb-3 col-md-6 col-lg-4">
+				<section class="info-box info-box--blue">
+					<div class="info-box__icon"><span class="fa fa-shopping-cart"></span></div>
+					<div class="info-box__description">
+						<h2>Products</h2>
+						<h1>520</h1>
+						<time>12 Minutes ago</time>
+					</div>
+					<a title="Detail Products" class="info-box__btn-detail" href=""><span class="fa fa-arrow-right"></span></a>
+				</section>
+			</div>
+			<div class="mb-3 col-md-6 col-lg-4">
+				<section class="info-box info-box--red">
+					<div class="info-box__icon"><span class="fa fa-thumbs-up"></span></div>
+					<div class="info-box__description">
+						<h2>Likes</h2>
+						<h1>120</h1>
+						<time>2 Minutes ago</time>
+					</div>
+					<a class="info-box__btn-detail" href=""><span class="fa fa-arrow-right"></span></a>
+				</section>
+			</div>
+			<div class="mb-3 col-md-6 col-lg-4">
+				<section class="info-box info-box--green">
+					<div class="info-box__icon"><span class="fa fa-users"></span></div>
+					<div class="info-box__description">
+						<h2>Members</h2>
+						<h1>700</h1>
+						<time>30 Minutes ago</time>
+					</div>
+					<a class="info-box__btn-detail" href=""><span class="fa fa-arrow-right"></span></a>
+				</section>
+			</div>
+			<div class="mb-3 col-md-6 col-lg-4">
+				<section class="info-box info-box--orange">
+					<div class="info-box__icon"><span class="fa fa-shopping-cart"></span></div>
+					<div class="info-box__description">
+						<h2>Orders</h2>
+						<h1>120</h1>
+						<time>2 Minutes ago</time>
+					</div>
+					<a class="info-box__btn-detail" href=""><span class="fa fa-arrow-right"></span></a>
+				</section>
+			</div>
+		</div><!-- row -->
+	</main>
+
+	<!-- footer -->
+	<footer class="footer footer--ml-sidebar-width">
+		<p class="mb-2 mb-sm-0">Copyright &copy; Your Website 2020. All rights reserved</p>
+		<p>Version 1.0.1</p>
+	</footer>
+
+	<!-- jQuery first, then Bootstrap JS, and Reza Admin JS-->
+    <script src="../dist/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/reza-admin.min.js"></script>
+</body>
+</html>

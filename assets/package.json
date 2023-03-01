@@ -1,0 +1,13 @@
+{
+	"name": "reza-admin",
+	"version": "1.0.1",
+	"scripts": {
+		"build-reza-admin": "babel build/js/reza-admin.js -o dist/js/reza-admin.js",
+		"build-doc": "babel build/js/doc.js -o docs/dist/js/doc.js"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.10.5",
+		"@babel/preset-env": "^7.10.2"
+	}
+}

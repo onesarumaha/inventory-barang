@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Require meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>General . Reza Admin</title>
+
+    <!-- Social network metas -->
+    <meta name="author" content="@FikkriReza">
+    <meta name="description" content="Open source responsive admin template with Bootstrap framework">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FikkriReza">
+    <meta name="twitter:creator" content="@FikkriReza">
+
+    <meta property="fb:app_id" content="801699283982913">
+    <meta property="og:url" content="https://rezafikkri.github.io/Reza-Admin">
+    <meta property="og:title" content="General . Reza Admin">
+    <meta property="og:description" content="Open source responsive admin template with Bootstrap framework">
+    <meta property="og:image" content="https://rezafikkri.github.io/Reza-Admin/dist/img/rezaadmin.jpg">
+
+	<!-- Bootstrap CSS first -->
+	<link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+	<!-- then Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- and Reza Admin CSS -->
+	<link rel="stylesheet" type="text/css" href="../dist/css/reza-admin.min.css">
+	<!-- Favicon -->
+	<link rel="icon" href="../dist/img/Reza_Admin.ico">
+</head>
+<body>		
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-sm navbar--white">
+		<a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+		<a class="navbar-brand ml-3" href="index.html"><img src="../dist/img/Reza_Admin.svg" width="120" alt="logo reza"></a>
+		<button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+		    <span class="fa fa-navicon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item navbar__notification">
+					<a class="nav-link" href="#">
+						<span class="fa fa-bookmark"></span>
+						<span class="navbar__notification-number navbar__notification-number--blue">2</span>
+					</a>
+				</li>
+				<li class="nav-item navbar__notification">
+					<a class="nav-link " href="#">
+						<span class="fa fa-bell"></span>
+						<span class="navbar__notification-number navbar__notification-number--orange">2</span>
+					</a>
+				</li>
+				<li class="nav-item navbar__avatar dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+						<img src="../dist/img/reza.jpg" alt="avatar image">
+						<span>Reza Sariful Fikri</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="" class="dropdown-item">Settings Account</a>
+						<div class="dropdown-divider"></div>
+						<a href="" class="dropdown-item dropdown-item--hover-red">Logout <span class="fa fa-sign-out"></span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- sidebar -->
+	<aside class="sidebar">
+		<ul class="sidebar__nav">
+			<li class="sidebar__item"><a href="../index.html"><span class="fa fa-home"></span> Dashboard</a></li>
+			<li class="sidebar__item"><a href="widgets.html"><span class="fa fa-th-large"></span> Widgets</a></li>
+			<li class="sidebar__item"><a href="charts.html"><span class="fa fa-bar-chart-o"></span> Charts</a></li>
+			<li class="sidebar__item sidebar__item--dropdown-active"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-desktop"></span> UI Elements</a>
+				<ul class="sidebar__dropdown sidebar__dropdown--show">
+					<li class="sidebar__dropdown-item sidebar__dropdown-item--active"><a href="general.html">General</a></li>
+					<li class="sidebar__dropdown-item"><a href="buttons.html">Buttons</a></li>
+					<li class="sidebar__dropdown-item"><a href="icons.html">Icons</a></li>
+				</ul>
+			</li>
+
+
+			<li class="sidebar__item"><a href="forms.html"><span class="fa fa-pencil-square-o"></span> Forms</a></li>
+			<li class="sidebar__item"><a href="tables.html"><span class="fa fa-th-list"></span> Tables</a></li>
+			<li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-building"></span> Page</a>
+				<ul class="sidebar__dropdown">
+					<li class="sidebar__dropdown-item"><a href="login.html">Login</a></li>
+					<li class="sidebar__dropdown-item"><a href="register.html">Register</a></li>
+					<li class="sidebar__dropdown-item"><a href="forgot-password.html">Forgot Password</a></li>
+					<li class="sidebar__dropdown-item"><a href="404.html">404 Error</a></li>
+					<li class="sidebar__dropdown-item"><a href="blank.html">Blank</a></li>
+				</ul>
+			</li>
+
+			<li class="sidebar__item sidebar__item--header mt-3">Important for read</li>
+			<li class="sidebar__item"><a href="../docs/"><span class="fa fa-book"></span> Documentation</a></li>
+		</ul>
+	</aside>
+
+	<!-- main -->
+	<main class="main main--ml-sidebar-width">
+		<div class="row">
+			<header class="main__header col-12 mb-2">
+				<div class="main__title">
+					<h4>General</h4>
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+						<li class="breadcrumb-item active">General</li>
+					</ul>
+				</div>				
+			</header>
+
+			<div class="col-12">
+				<section class="main__box">
+					<h5>Alerts</h5>
+					<hr>
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="alert alert--danger">
+								<div class="alert__icon">
+									<span class="fa fa-ban"></span>
+								</div>
+								<div class="alert__description">
+									<p>Danger alert preview. This alert is dismissable.</p>
+								</div>
+								<div class="alert__action">
+									<a class="alert__close-btn">&times;</a>
+								</div>
+							</div><!-- alert -->
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<div class="alert alert--info">
+								<div class="alert__icon">
+									<span class="fa fa-info-circle"></span>
+								</div>
+								<div class="alert__description">
+									Danger alert preview. This alert is dismissable.
+								</div>
+								<div class="alert__action">
+									<a class="alert__close-btn">&times;</a>
+								</div>
+							</div><!-- alert -->
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<div class="alert alert--warning">
+								<div class="alert__icon">
+									<span class="fa fa-warning"></span>
+								</div>
+								<div class="alert__description">
+									Danger alert preview. This alert is dismissable.
+								</div>
+								<div class="alert__action">
+									<a class="alert__close-btn">&times;</a>
+								</div>
+							</div><!-- alert -->
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<div class="alert alert--success">
+								<div class="alert__icon">
+									<span class="fa fa-check-circle"></span>
+								</div>
+								<div class="alert__description">
+									Danger alert preview. This alert is dismissable.
+								</div>
+								<div class="alert__action">
+									<a class="alert__close-btn">&times;</a>
+								</div>
+							</div><!-- alert -->
+						</div>
+					</div><!-- row -->
+
+					<h5 class="mt-4"></h5>
+
+					<h5 class="mt-4">Modals</h5>
+					<hr>
+					<!-- modal success -->
+					<a href="#" class="btn btn--green mr-3 mt-2 mb-2 btn-show-modal" target-modal="#modal-success">Show Modal Success</a>
+					<div class="modal modal--success" id="modal-success">
+						<div class="modal__content">
+							<div class="modal__header">
+								<div class="modal__icon">
+									<span class="fa fa-check-circle"></span>
+								</div>
+								<div class="modal__title">
+									<h5><span>Success</span>, Account Created</h5>
+								</div>
+							</div>
+							<div class="modal__body">
+								<p>Congratulation, Account <b>@rezaSarifulFikri</b> has been created, now you have access for all features.</p>
+							</div>
+							<div class="modal__footer">
+								<a href="#" class="btn btn--green close-modal">Ok, Thank You</a>
+							</div>
+						</div>
+					</div>
+					<!-- modal success end -->
+
+					<!-- modal info -->
+					<a href="#" class="btn btn--blue mr-3 mt-2 mb-2 btn-show-modal" target-modal="#modal-info">Show Modal Info</a>
+					<div class="modal modal--info" id="modal-info">
+						<div class="modal__content">
+							<div class="modal__header">
+								<div class="modal__icon">
+									<span class="fa fa-info-circle"></span>
+								</div>
+								<div class="modal__title">
+									<h5><span>Info</span>, Data Permission</h5>
+								</div>
+							</div>
+							<div class="modal__body">
+								<p>You not have permission for look this data. Please call Admin if this wrong!.</p>
+							</div>
+							<div class="modal__footer">
+								<a href="#" class="btn btn--blue close-modal">Ok, I Understand!</a>
+							</div>
+						</div>
+					</div>
+					<!-- modal info end -->
+
+					<!-- modal danger -->
+					<a href="#" class="btn btn--red mr-3 mt-2 mb-2 btn-show-modal" target-modal="#modal-danger">Show Modal Danger</a>
+					<div class="modal modal--danger" id="modal-danger">
+						<div class="modal__content">
+							<div class="modal__header">
+								<div class="modal__icon">
+									<span class="fa fa-ban"></span>
+								</div>
+								<div class="modal__title">
+									<h5><span>Danger</span>, Are you sure?</h5>
+								</div>
+							</div>
+							<div class="modal__body">
+								<p>This action can't canceled, this will permanently delete account <b>@rezaSarifulFikri</b>.</p>
+								<p>Enter password for confirm deletion Account!</p>
+								<input type="password" name="password" placeholder="Password ..." class="form form--focus-red mt-0">
+							</div>
+							<div class="modal__footer">
+								<a href="#" class="btn btn--gray-outline close-modal">Cancel</a>
+								<a href="#" class="btn btn--red mb-2 mb-sm-0">Delete Account</a>
+							</div>
+						</div>
+					</div>
+					<!-- modal danger end -->
+
+					<!-- modal warning -->
+					<a href="#" class="btn btn--orange mr-3 mt-2 mb-2 btn-show-modal" target-modal="#modal-warning">Show Modal Warning</a>
+					<div class="modal modal--warning" id="modal-warning">
+						<div class="modal__content">
+							<div class="modal__header">
+								<div class="modal__icon">
+									<span class="fa fa-warning"></span>
+								</div>
+								<div class="modal__title">
+									<h5><span>Warning</span>, Login Unrecognized</h5>
+								</div>
+							</div>
+							<div class="modal__body">
+								<p>Your account login in new device: <b>Linux, Firefox</b>. <a href="">Tell us if not you!</a>.</p>
+							</div>
+							<div class="modal__footer">
+								<a href="#" class="btn btn--orange close-modal">Ok, I Understand</a>
+							</div>
+						</div>
+					</div>
+					<!-- modal warning end -->
+
+					<h5 class="mt-4">Loadings</h5>
+					<hr>
+					<div class="row">
+						<!-- loading circle gray -->
+						<div class="col-lg-1 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--gray">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--lg loading-circle--gray">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<!-- loading circle gray end -->
+						<!-- loading circle blue -->
+						<div class="col-lg-1 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--blue">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--lg loading-circle--blue">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<!-- loading circle blue end -->
+						<!-- loading circle red -->
+						<div class="col-lg-1 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--red">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--lg loading-circle--red">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<!-- loading circle red end -->
+						<!-- loading circle green -->
+						<div class="col-lg-1 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--green">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 mb-3 mt-3">
+							<div class="loading-circle loading-circle--lg loading-circle--green">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<!-- loading circle green end -->
+						<!-- loading circle orange -->
+						<div class="col-lg-1 col-md-2 col-sm-2 mb-2 mt-3">
+							<div class="loading-circle loading-circle--orange">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 mb-2 mt-3">
+							<div class="loading-circle loading-circle--lg loading-circle--orange">
+								<div class="loading-circle__fill"></div>
+							</div>
+						</div>
+						<!-- loading circle orange end -->
+					</div><!-- row -->
+
+					<h5 class="mt-5">Fixed Loadings</h5>
+					<hr>
+					<a href="#" class="btn btn--gray mr-3 mt-2 mb-2 show-loading-circle" target-loading="#loading-default">Show Loading Default Fixed</a>
+					<div class="loading-circle loading-circle--gray loading-circle--lg loading-circle--fixed d-none" id="loading-default">
+						<div class="loading-circle__fill"></div>
+					</div>
+
+					<a href="#" class="btn btn--green mr-3 mt-2 mb-2 show-loading-circle" target-loading="#loading-green">Show Loading Green Fixed</a>
+					<div class="loading-circle loading-circle--lg loading-circle--green loading-circle--fixed d-none" id="loading-green">
+						<div class="loading-circle__fill"></div>
+					</div>
+
+					<a href="#" class="btn btn--blue mr-3 mt-2 mb-2 show-loading-circle" target-loading="#loading-blue">Show Loading Blue Fixed</a>
+					<div class="loading-circle loading-circle--lg loading-circle--blue loading-circle--fixed d-none" id="loading-blue">
+						<div class="loading-circle__fill"></div>
+					</div>
+
+					<a href="#" class="btn btn--red mr-3 mt-2 mb-2 show-loading-circle" target-loading="#loading-red">Show Loading Red Fixed</a>
+					<div class="loading-circle loading-circle--lg loading-circle--red loading-circle--fixed d-none" id="loading-red">
+						<div class="loading-circle__fill"></div>
+					</div>
+
+					<a href="#" class="btn btn--orange mr-3 mt-2 mb-2 show-loading-circle" target-loading="#loading-orange">Show Loading Orange Fixed</a>
+					<div class="loading-circle loading-circle--lg loading-circle--orange loading-circle--fixed d-none" id="loading-orange">
+						<div class="loading-circle__fill"></div>
+					</div>
+				</section>
+			</div>
+		</div><!-- row -->
+	</main>
+
+	<!-- footer -->
+	<footer class="footer footer--ml-sidebar-width">
+		<p class="mb-2 mb-sm-0">Copyright &copy; Your Website 2020. All rights reserved</p>
+		<p>Version 1.0.1</p>
+	</footer>
+
+	<!-- jQuery first, then Bootstrap JS, and Reza Admin JS-->
+    <script src="../dist/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/reza-admin.min.js"></script>
+
+    <script type="text/javascript">
+    	"use strict";
+    	
+    	var mainBox = document.querySelector(".main__box");
+    	if (mainBox !== null) {
+		  mainBox.addEventListener('click', function (e) {
+		    /* show hide modal */
+		    var btnShowModal = e.target;
+
+		    if (btnShowModal.classList.contains("btn-show-modal")) {
+		      e.preventDefault(); // stop body scrolling
+
+		      document.querySelector("body").classList.add("stop-scrolling"); // show modal
+
+		      var targetModal = btnShowModal.getAttribute("target-modal");
+		      var modal = document.querySelector(targetModal);
+		      modal.classList.add("modal--fade-in");
+		    }
+
+		    var btnCloseModal = e.target;
+
+		    if (btnCloseModal.classList.contains("close-modal")) {
+		      e.preventDefault(); // make body scrolling agian
+
+		      document.querySelector("body").classList.remove("stop-scrolling"); // hide modal
+
+		      btnCloseModal.parentElement.parentElement.parentElement.classList.remove("modal--fade-in");
+		    }
+		    /* show hide modal end */
+
+		    /* show hide loading circle fixed */
+
+
+		    var btnShowLoadingCircle = e.target;
+
+		    if (btnShowLoadingCircle.classList.contains("show-loading-circle")) {
+		      e.preventDefault(); // stop body scrolling
+
+		      document.querySelector("body").classList.add("stop-scrolling");
+		      var targetLoading = btnShowLoadingCircle.getAttribute("target-loading");
+		      var loading = document.querySelector(targetLoading);
+		      loading.classList.remove("d-none"); // if more from 5 second add class d-none again
+
+		      setTimeout(function () {
+		        loading.classList.add("d-none"); // stop body scrolling again
+
+		        document.querySelector("body").classList.remove("stop-scrolling");
+		      }, 1000);
+		    }
+		    /* show hide loading circle fixed end */
+
+		  });
+		}
+    </script>
+</body>
+</html>

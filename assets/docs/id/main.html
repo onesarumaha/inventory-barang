@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Require meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Main . Reza Admin</title>
+
+    <!-- Social network metas -->
+    <meta name="author" content="@FikkriReza">
+    <meta name="description" content="Open source responsive admin template with Bootstrap framework">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FikkriReza">
+    <meta name="twitter:creator" content="@FikkriReza">
+
+    <meta property="fb:app_id" content="801699283982913">
+    <meta property="og:url" content="https://rezafikkri.github.io/Reza-Admin">
+    <meta property="og:title" content="Main . Reza Admin">
+    <meta property="og:description" content="Open source responsive admin template with Bootstrap framework">
+    <meta property="og:image" content="https://rezafikkri.github.io/Reza-Admin/dist/img/rezaadmin.jpg">
+
+    <!-- Bootstrap CSS first -->
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
+    <!-- then Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- then Reza Admin CSS and Doc css -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/reza-admin.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/doc.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../../dist/img/Reza_Admin.ico">
+    <!-- higlight css -->
+    <link rel="stylesheet" href="../dist/plugin/highlight/styles/nord.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar--white">
+        <a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+        <a class="navbar-brand ml-3" href="index.html"><img src="../../dist/img/Reza_Admin.svg" width="120" alt="logo reza"></a>
+        <button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+            <span class="fa fa-navicon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://github.com/rezafikkri/Reza-Admin" class="nav-link"><span class="fa fa-github fa-lg"></span></a></li>
+                <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/fikkrireza" class="nav-link"><span class="fa fa-twitter fa-lg"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+        <ul class="sidebar__nav">
+            <li class="sidebar__item"><a href="index.html"><span class="fa fa-wrench"></span> Instalasi</a></li>
+
+            <li class="sidebar__item"><a href="dependencies.html"><span class="fa fa-cube"></span> Ketergantungan & Plugin</a></li>
+            <li class="sidebar__item sidebar__item--dropdown-active"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-columns"></span> Tata Letak</a>
+                <ul class="sidebar__dropdown sidebar__dropdown--show">
+                    <li class="sidebar__dropdown-item"><a href="navbar.html">Navbar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="sidebar.html">Sidebar</a></li>
+                    <li class="sidebar__dropdown-item sidebar__dropdown-item--active"><a href="main.html">Main</a></li>
+                    <li class="sidebar__dropdown-item"><a href="footer.html">Footer</a></li>
+                </ul>
+            </li>
+            <li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-puzzle-piece"></span> Komponen</a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown-item"><a href="chart.html">Chart</a></li>
+                    <li class="sidebar__dropdown-item"><a href="loading.html">Loading</a></li>
+                    <li class="sidebar__dropdown-item"><a href="info-box.html">Info Box</a></li>
+                    <li class="sidebar__dropdown-item"><a href="button.html">Button</a></li>
+                    <li class="sidebar__dropdown-item"><a href="alert.html">Alert</a></li>
+                    <li class="sidebar__dropdown-item"><a href="modal.html">Modal</a></li>
+                    <li class="sidebar__dropdown-item"><a href="form.html">Form</a></li>
+                    <li class="sidebar__dropdown-item"><a href="table.html">Table</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__item"><a class="sidebar__btn-dropdown" href=""><span class="fa fa-building"></span> Halaman</a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown-item"><a href="login.html">Login</a></li>
+                    <li class="sidebar__dropdown-item"><a href="register.html">Daftar</a></li>
+                    <li class="sidebar__dropdown-item"><a href="forgot-password.html">Lupa Password</a></li>
+                    <li class="sidebar__dropdown-item"><a href="404.html">404</a></li>
+                    <li class="sidebar__dropdown-item"><a href="blank.html">Kosong</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- main -->
+    <main class="main main--ml-sidebar-width">
+        <div class="row">
+            <header class="main__header col-12 mb-2">
+                <div class="main__title">
+                    <h4>Main</h4>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Main</li>
+                    </ul>
+                </div>              
+            </header>
+            <div class="col-12">
+                <div class="main__box">
+                    <h4>Dasar</h4>
+                    <p>Semua konten dari website atau aplikasimu letakkan dalam Main. Membuat Main kamu membutuhkan tag <i>&lt;main&gt;</i> dengan class <span class="text-green">.main</span>, Jika kamu menggunakan Sidebar, maka kamu harus menambahkan class <span class="text-green">.main--ml-sidebar-width</span> setelah class <span class="text-green">.main</span>, agar lebar Main menyesuaikan dengan lebar Sidebar. Kemudian didalam Main kamu bisa meng-implementasikan Grid Sistem Bootstrap untuk membuat konten dari website atau aplikasi kamu, lihat <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/4.5/layout/grid/">dokumentasi grid sistem Bootstrap!</a>. Letakkan Main setelah Sidebar.</p>
+
+                    <div class="pre-code-box">
+                        <div class="pre-code-box__preview">
+                            <!-- navbar -->
+                            <nav class="navbar justify-content-start navbar--white">
+                                <a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+                                <a class="navbar-brand ml-3" href="#"><img src="../../dist/img/Reza_Admin.svg" width="120" alt="logo reza"></a>
+                            </nav>
+                            <!-- sidebar -->
+                            <aside class="sidebar">
+                                <ul class="sidebar__nav">
+                                    <li class="sidebar__item sidebar__item--header">Dashboard</li>
+                                    <li class="sidebar__item"><a href="#"><span class="fa fa-home"></span> Gambaran</a></li>
+                                    <li class="sidebar__item"><a href="#"><span class="fa fa-group"></span> Rencana Harian</a></li>
+                                    <li class="sidebar__item"><a href="#"><span class="fa fa-area-chart"></span> Kemajuan</a></li>
+
+                                    <li class="sidebar__item sidebar__item--header mt-3">Konten</li>
+                                    <li class="sidebar__item sidebar__item--dropdown-active"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-file-text"></span> Artikel</a>
+                                        <ul class="sidebar__dropdown sidebar__dropdown--show">
+                                            <li class="sidebar__dropdown-item sidebar__dropdown-item--active"><a href="#">HTML</a></li>
+                                            <li class="sidebar__dropdown-item"><a href="#">CSS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-video-camera"></span> Video</a>
+                                        <ul class="sidebar__dropdown">
+                                            <li class="sidebar__dropdown-item"><a href="#">PHP</a></li>
+                                            <li class="sidebar__dropdown-item"><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <!-- main -->
+                            <main class="main main--ml-sidebar-width">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5>Ini adalah code dasar untuk membuat Main</h5>
+                                    </div>
+                                </div><!-- row -->
+                            </main>
+                        </div><!-- pre-code-box__preview -->
+                        <pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;!-- navbar --&gt;
+&lt;nav class=&quot;navbar justify-content-start navbar--white&quot;&gt;
+    &lt;a class=&quot;navbar__sidebar-toggler&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-bars&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a class=&quot;navbar-brand ml-3&quot; href=&quot;#&quot;&gt;
+        &lt;img src=&quot;[host mu]/dist/img/Reza_Admin.svg&quot; width=&quot;120&quot; alt=&quot;logo reza&quot;&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;
+&lt;!-- sidebar --&gt;
+&lt;aside class=&quot;sidebar&quot;&gt;
+    &lt;ul class=&quot;sidebar__nav&quot;&gt;
+        &lt;li class=&quot;sidebar__item sidebar__item--header&quot;&gt;Dashboard&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;
+            &lt;span class=&quot;fa fa-home&quot;&gt;&lt;/span&gt; Gambaran&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-group&quot;&gt;&lt;/span&gt; Rencana Harian&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-area-chart&quot;&gt;&lt;/span&gt; Kemajuan&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;sidebar__item sidebar__item--header mt-3&quot;&gt;Konten&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item sidebar__item--dropdown-active&quot;&gt;
+            &lt;a class=&quot;sidebar__btn-dropdown&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;fa fa-file-text&quot;&gt;&lt;/span&gt; Artikel
+            &lt;/a&gt;
+            &lt;ul class=&quot;sidebar__dropdown sidebar__dropdown--show&quot;&gt;
+                &lt;li class=&quot;sidebar__dropdown-item sidebar__dropdown-item--active&quot;&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a class=&quot;sidebar__btn-dropdown&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;fa fa-video-camera&quot;&gt;&lt;/span&gt; Video
+            &lt;/a&gt;
+            &lt;ul class=&quot;sidebar__dropdown&quot;&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;PHP&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;!-- main --&gt;
+&lt;main class=&quot;main main--ml-sidebar-width&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+            &lt;h5&gt;Ini adalah code dasar untuk membuat Main&lt;/h5&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- row --&gt;
+&lt;/main&gt;</code></pre>
+                    </div><!-- pre-code-box -->
+
+                    <h4 class="mt-5">Header</h4>
+                    <p>Membuat Header kamu perlu membuat element didalam element <i>&lt;div class="row"&gt;</i> menggunakan tag <i>&lt;header&gt;</i> dengan class <span class="text-green">.main__header</span>, dan jangan lupa untuk menambahkan class <span class="text-green">.col-12</span>, serta tambahkan juga class <span class="text-green">.mb-2</span>, untuk memberi jarak terhadap element dibawah header. Selanjutnya dalam tag <i>&lt;header&gt;</i> buat element menggunakan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.main__title</span>, didalam Main Title kamu bisa menambahkan judul dari headernya, kamu bisa menggunakan tag <i>&lt;h1&gt;</i>, <i>&lt;h2&gt;</i>, dan seterusnya. Namun saya sarankan untuk memakai tag <i>&lt;h4&gt;</i>. Selain judul kamu juga bisa menambahkan Breadcrumb, caranya sama seperti <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/4.5/components/breadcrumb/">dokumentasi breadcrumb Bootstrap</a>. Letakkan breadcrumb di bawah judul.</p>
+
+                    <p>Jika kamu butuh untuk menambahkan text tambahan pada header, didalam tag <i>&lt;header&gt;</i> buat element menggunakan tag <i>&lt;div&gt;</i> dengan class <span class="text-green">.main__text</span>, didalam Main Text kamu bisa menggunakan tag <i>&lt;p&gt;</i> untuk membuat paragraf dan tag <i>&lt;a&gt;</i> untuk membuat link. Letakkan Main Text setelah Main Title.</p>
+                    <div class="pre-code-box">
+                        <div class="pre-code-box__preview">
+                            <!-- navbar -->
+                            <nav class="navbar justify-content-start navbar--white">
+                                <a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+                                <a class="navbar-brand ml-3" href="#"><img src="../../dist/img/Reza_Admin.svg" width="120" alt="logo reza"></a>
+                            </nav>
+                            <!-- sidebar -->
+                            <aside class="sidebar">
+                                <ul class="sidebar__nav">
+                                    <li class="sidebar__item sidebar__item--header">Dashboard</li>
+                                    <li class="sidebar__item"><a href="#"><span class="fa fa-home"></span> Gambaran</a></li>
+                                    <li class="sidebar__item"><a href="#"><span class="fa fa-group"></span> Rencana Harian</a></li>
+                                    <li class="sidebar__item"><a href="#"><span class="fa fa-area-chart"></span> Kemajuan</a></li>
+
+                                    <li class="sidebar__item sidebar__item--header mt-3">Konten</li>
+                                    <li class="sidebar__item sidebar__item--dropdown-active"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-file-text"></span> Artikel</a>
+                                        <ul class="sidebar__dropdown sidebar__dropdown--show">
+                                            <li class="sidebar__dropdown-item sidebar__dropdown-item--active"><a href="#">HTML</a></li>
+                                            <li class="sidebar__dropdown-item"><a href="#">CSS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar__item"><a class="sidebar__btn-dropdown" href="#"><span class="fa fa-video-camera"></span> Video</a>
+                                        <ul class="sidebar__dropdown">
+                                            <li class="sidebar__dropdown-item"><a href="#">PHP</a></li>
+                                            <li class="sidebar__dropdown-item"><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <!-- main -->
+                            <main class="main main--ml-sidebar-width">
+                                <div class="row">
+                                    <header class="main__header col-12 mb-2">
+                                        <div class="main__title">
+                                            <h4>Main</h4>
+                                            <ul class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active">Main</li>
+                                            </ul>
+                                        </div>
+                                        <div class="main__text">
+                                            <p>Membuat <a href="#">Main</a> dengan header dan header text.</p>
+                                         </div>              
+                                    </header>
+                                </div><!-- row -->
+                            </main>
+                        </div><!-- pre-code-box__preview -->
+                        <pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;!-- navbar --&gt;
+&lt;nav class=&quot;navbar justify-content-start navbar--white&quot;&gt;
+    &lt;a class=&quot;navbar__sidebar-toggler&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-bars&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a class=&quot;navbar-brand ml-3&quot; href=&quot;#&quot;&gt;
+        &lt;img src=&quot;[host mu]/dist/img/Reza_Admin.svg&quot; width=&quot;120&quot; alt=&quot;logo reza&quot;&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;
+&lt;!-- sidebar --&gt;
+&lt;aside class=&quot;sidebar&quot;&gt;
+    &lt;ul class=&quot;sidebar__nav&quot;&gt;
+        &lt;li class=&quot;sidebar__item sidebar__item--header&quot;&gt;Dashboard&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-home&quot;&gt;&lt;/span&gt; Gambaran&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-group&quot;&gt;&lt;/span&gt; Rencana Harian&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-area-chart&quot;&gt;&lt;/span&gt; Kemajuan&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;sidebar__item sidebar__item--header mt-3&quot;&gt;Konten&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item sidebar__item--dropdown-active&quot;&gt;
+            &lt;a class=&quot;sidebar__btn-dropdown&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;fa fa-file-text&quot;&gt;&lt;/span&gt; Artikel
+            &lt;/a&gt;
+            &lt;ul class=&quot;sidebar__dropdown sidebar__dropdown--show&quot;&gt;
+                &lt;li class=&quot;sidebar__dropdown-item sidebar__dropdown-item--active&quot;&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a class=&quot;sidebar__btn-dropdown&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;fa fa-video-camera&quot;&gt;&lt;/span&gt; Video
+            &lt;/a&gt;
+            &lt;ul class=&quot;sidebar__dropdown&quot;&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;PHP&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;!-- main --&gt;
+&lt;main class=&quot;main main--ml-sidebar-width&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;header class=&quot;main__header col-12 mb-2&quot;&gt;
+            &lt;div class=&quot;main__title&quot;&gt;
+                &lt;h4&gt;Main&lt;/h4&gt;
+                &lt;ul class=&quot;breadcrumb&quot;&gt;
+                    &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;breadcrumb-item active&quot;&gt;Main&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;main__text&quot;&gt;
+                &lt;p&gt;Membuat &lt;a href=&quot;#&quot;&gt;Main&lt;/a&gt; dengan header dan header text.&lt;/p&gt;
+            &lt;/div&gt;              
+        &lt;/header&gt;
+    &lt;/div&gt;&lt;!-- row --&gt;
+&lt;/main&gt;</code></pre>
+                    </div><!-- pre-code-box -->
+
+                    <h4 class="mt-5">Box</h4>
+                    <p>Box adalah sebuah kotak dengan background putih dan border, dimana kamu bisa meletakkan didalamnya seperti table, form dan lain-lain, sesuaikan dengan kebutuhan. Membuatnya kamu perlu membuat element menggunakan tag <i>&lt;div&gt;</i> atau <i>&lt;section&gt;</i> (<i>disarankan</i>) dengan class <span class="text-green">.main__box</span>, jangan lupa letakkan Box didalam grid sistem Bootstrap dan letakkan Box setelah Header.</p>
+                    <div class="pre-code-box">
+                        <div class="pre-code-box__preview">
+                            <!-- navbar -->
+                            <nav class="navbar justify-content-start navbar--white">
+                                <a class="navbar__sidebar-toggler" href="#"><span class="fa fa-bars"></span></a>
+                                <a class="navbar-brand ml-3" href="#">
+                                    <img src="../../dist/img/Reza_Admin.svg" width="120" alt="logo reza">
+                                </a>
+                            </nav>
+                            <!-- sidebar -->
+                            <aside class="sidebar">
+                                <ul class="sidebar__nav">
+                                    <li class="sidebar__item sidebar__item--header">Dashboard</li>
+                                    <li class="sidebar__item">
+                                        <a href="#"><span class="fa fa-home"></span> Gambaran</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <a href="#"><span class="fa fa-group"></span> Rencana Harian</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <a href="#"><span class="fa fa-area-chart"></span> Kemajuan</a>
+                                    </li>
+
+                                    <li class="sidebar__item sidebar__item--header mt-3">Konten</li>
+                                    <li class="sidebar__item sidebar__item--dropdown-active">
+                                        <a class="sidebar__btn-dropdown" href="#">
+                                            <span class="fa fa-file-text"></span> Artikel
+                                        </a>
+                                        <ul class="sidebar__dropdown sidebar__dropdown--show">
+                                            <li class="sidebar__dropdown-item sidebar__dropdown-item--active"><a href="#">HTML</a></li>
+                                            <li class="sidebar__dropdown-item"><a href="#">CSS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <a class="sidebar__btn-dropdown" href="#">
+                                            <span class="fa fa-video-camera"></span> Video
+                                        </a>
+                                        <ul class="sidebar__dropdown">
+                                            <li class="sidebar__dropdown-item"><a href="#">PHP</a></li>
+                                            <li class="sidebar__dropdown-item"><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <!-- main -->
+                            <main class="main main--ml-sidebar-width pb-3">
+                                <div class="row">
+                                    <header class="main__header col-12 mb-2">
+                                        <div class="main__title">
+                                            <h4>Main</h4>
+                                            <ul class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active">Main</li>
+                                            </ul>
+                                        </div>
+                                        <div class="main__text">
+                                            <p>Membuat <a href="#">Main</a> dengan header dan header text.</p>
+                                        </div>              
+                                    </header>
+                                    <!-- main box -->
+                                    <div class="col-12">
+                                        <section class="main__box">
+                                            <h5>Ini adalah contoh penggunaan box</h5>
+                                        </section>
+                                    </div>
+                                </div><!-- row -->
+                            </main>
+                        </div><!-- pre-code-box__preview -->
+                        <pre><div class="pre-code-box__action"><a class="clipboard">Copy</a><a class="language">HTML</a></div><code class="html">&lt;!-- navbar --&gt;
+&lt;nav class=&quot;navbar justify-content-start navbar--white&quot;&gt;
+    &lt;a class=&quot;navbar__sidebar-toggler&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-bars&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a class=&quot;navbar-brand ml-3&quot; href=&quot;#&quot;&gt;
+        &lt;img src=&quot;[host mu]/dist/img/Reza_Admin.svg&quot; width=&quot;120&quot; alt=&quot;logo reza&quot;&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;
+&lt;!-- sidebar --&gt;
+&lt;aside class=&quot;sidebar&quot;&gt;
+    &lt;ul class=&quot;sidebar__nav&quot;&gt;
+        &lt;li class=&quot;sidebar__item sidebar__item--header&quot;&gt;Dashboard&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-home&quot;&gt;&lt;/span&gt; Gambaran&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-group&quot;&gt;&lt;/span&gt; Rencana Harian&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-area-chart&quot;&gt;&lt;/span&gt; Kemajuan&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;sidebar__item sidebar__item--header mt-3&quot;&gt;Konten&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item sidebar__item--dropdown-active&quot;&gt;
+            &lt;a class=&quot;sidebar__btn-dropdown&quot; href=&quot;#&quot;&gt;
+            &lt;span class=&quot;fa fa-file-text&quot;&gt;&lt;/span&gt; Artikel
+            &lt;/a&gt;
+            &lt;ul class=&quot;sidebar__dropdown sidebar__dropdown--show&quot;&gt;
+                &lt;li class=&quot;sidebar__dropdown-item sidebar__dropdown-item--active&quot;&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a class=&quot;sidebar__btn-dropdown&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;fa fa-video-camera&quot;&gt;&lt;/span&gt; Video
+            &lt;/a&gt;
+            &lt;ul class=&quot;sidebar__dropdown&quot;&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;PHP&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__dropdown-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;!-- main --&gt;
+&lt;main class=&quot;main main--ml-sidebar-width&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;header class=&quot;main__header col-12 mb-2&quot;&gt;
+            &lt;div class=&quot;main__title&quot;&gt;
+            &lt;h4&gt;Main&lt;/h4&gt;
+            &lt;ul class=&quot;breadcrumb&quot;&gt;
+                &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;breadcrumb-item active&quot;&gt;Main&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;main__text&quot;&gt;
+                &lt;p&gt;Membuat &lt;a href=&quot;#&quot;&gt;Main&lt;/a&gt; dengan header dan header text.&lt;/p&gt;
+            &lt;/div&gt;              
+        &lt;/header&gt;
+        &lt;!-- main box --&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+            &lt;section class=&quot;main__box&quot;&gt;
+                &lt;h5&gt;Ini adalah contoh penggunaan box&lt;/h5&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- row --&gt;
+&lt;/main&gt;</code></pre>
+                    </div><!-- pre-code-box -->
+                </div>
+            </div>
+        </div><!-- row -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer footer--ml-sidebar-width">
+        <p class="mb-2 mb-sm-0">Copyright &copy; Reza Admin 2020. All rights reserved</p>
+        <p>Version 1.0.1</p>
+    </footer>
+
+    <!-- jQuery first, then Bootstrap JS, and Reza Admin JS-->
+    <script src="../../dist/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/reza-admin.min.js"></script>
+
+    <!-- Optional Javascript -->
+    <script src="../dist/js/doc.min.js"></script>
+    <script src="../dist/plugin/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

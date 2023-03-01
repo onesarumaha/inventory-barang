@@ -1,0 +1,104 @@
+/* loading */
+@mixin loading-circle-color($name-color, $border-color) {
+	&--#{$name-color} &__fill::after {
+		border-top-color: $border-color;
+		border-right-color: $border-color;
+	}
+}
+
+.loading-circle {
+	&__fill,
+	&__fill::after {
+		border-radius: 50%;
+	}
+
+	&__fill {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 5px solid #eaeaea;
+	}
+
+	&__fill::after {
+		content: "";
+		position: absolute;
+		top: -5px;
+		bottom: -5px;
+		right: -5px;
+		left: -5px;
+		border: 5px solid transparent;
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+
+		-webkit-animation: loading-circle-rotate 1s linear infinite;
+        animation: loading-circle-rotate 1s linear infinite;
+	}
+
+	@include loading-circle-color('gray', $gray-reza);
+	@include loading-circle-color('blue', $blue-reza);
+	@include loading-circle-color('red', $red-reza);
+	@include loading-circle-color('green', $green-reza);
+	@include loading-circle-color('orange', $orange-reza);
+
+	&--lg &__fill,
+	&--lg &__fill::after {
+		border-width: 10px;
+	}
+
+	&--lg &__fill {
+		width: 60px;
+		height: 60px;
+	}
+
+	&--lg &__fill::after {
+		top: -10px;
+		bottom: -10px;
+		right: -10px;
+		left: -10px;
+	}
+
+	&--fixed {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+		background-color: rgba(252,252,252,.9);
+
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+}
+
+@-webkit-keyframes loading-circle-rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@keyframes loading-circle-rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
